@@ -33,7 +33,7 @@ module.exports = configure(function (/* ctx */) {
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      'roboto-font', // optional, you are not bound to it
+      /*'roboto-font', // optional, you are not bound to it*/
       'material-icons', // optional, you are not bound to it
     ],
 
@@ -63,6 +63,7 @@ module.exports = configure(function (/* ctx */) {
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
 
+      // 플러그인 설치경로
       vitePlugins: [
         [
           'vite-plugin-checker',
@@ -83,8 +84,14 @@ module.exports = configure(function (/* ctx */) {
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
+    // 색깔 동적으로 변환 가능
     framework: {
-      config: {},
+      cssAddon:true,
+      config: {
+        screen:{
+          bodyClasses:true //
+        }
+      },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
@@ -97,7 +104,8 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: [],
+      plugins: ['LocalStorage',
+        'SessionStorage'],
     },
 
     // animations: 'all', // --- includes all animations
