@@ -18,7 +18,13 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: ['initialization','constants','loading-plugin'],
+    boot: [
+      'initialization',
+      'constants',
+      'loading-plugin',
+      'loading-bar-plugin',
+      'i18n'
+    ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: ['app.scss'],
@@ -44,7 +50,7 @@ module.exports = configure(function (/* ctx */) {
         node: 'node20',
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -86,6 +92,7 @@ module.exports = configure(function (/* ctx */) {
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
     // 색깔 동적으로 변환 가능
     framework: {
+      lang:'ko-KR',
       cssAddon:true,
       config: {
         screen:{
@@ -112,7 +119,9 @@ module.exports = configure(function (/* ctx */) {
       plugins: [
         'LocalStorage',
         'SessionStorage',
-        'Loading'
+        'Loading',
+        'LoadingBar',
+        'Meta'
       ],
     },
 

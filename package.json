@@ -1,8 +1,8 @@
 {
   "name": "learn-quasar",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "Quasar를 활용하여 멋진 UI를 만들 수 있도록 기초부터 활용까지 한 번에 배우는 온라인 강의입니다.",
+  "productName": "Quasar 강의",
   "author": "JUGGUM <gayoung801@naver.com>",
   "private": true,
   "scripts": {
@@ -16,17 +16,18 @@
     "@quasar/extras": "^1.16.4",
     "quasar": "^2.16.0",
     "vue": "^3.4.18",
+    "vue-i18n": "^10.0.0-beta.4",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.0.0",
-    "vite-plugin-checker": "^0.6.4",
-    "eslint-config-prettier": "^8.1.0",
-    "prettier": "^2.5.1",
     "@quasar/app-vite": "^1.9.0",
     "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.14"
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.5.1",
+    "vite-plugin-checker": "^0.6.4"
   },
   "engines": {
     "node": "^20 || ^18 || ^16",
